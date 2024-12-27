@@ -8,27 +8,24 @@ interface WritingPracticeProps {
 
 export function WritingPractice({ sentence }: WritingPracticeProps) {
   const handleReset = () => {
-    window.location.reload()
+    window.location.reload();
   };
 
   return (
     <div className="space-y-8">
-      
       {/* Drawing Practice Section */}
       <div className="bg-white rounded-xl shadow-sm p-6 overflow-hidden">
         <h2 className="text-2xl font-semibold mb-4 text-center" style={{ direction: 'rtl' }}>
           تدرب على الكتابة
         </h2>
-        
-        <div className="relative w-full overflow-x-auto">
-          <div className="min-w-[800px]">
-            <DrawingCanvas 
-              width={800}
-              height={300}
-              color="#ef4444"
-              text={sentence}
-            />
-          </div>
+
+        <div className="relative w-full overflow-scroll">
+          <DrawingCanvas 
+            width={800}
+            height={300}
+            color="#ef4444"
+            text={sentence}
+          />
         </div>
 
         <div className="mt-4 flex justify-center">
