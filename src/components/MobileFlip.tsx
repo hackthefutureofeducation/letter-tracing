@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '../MobileFlip.css'
 
 export const MobileFlip: React.FC = () => {
     const [isPortrait, setIsPortrait] = useState<boolean>(true);
